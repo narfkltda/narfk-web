@@ -599,6 +599,19 @@ p {
     .hamburger {
         display: none;
     }
+    
+    .privacy-main {
+        padding: 120px 0 60px;
+    }
+    
+    .privacy-content {
+        padding: 0 1rem;
+    }
+    
+    .nav-links {
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
 
     .hero-content {
         grid-template-columns: 1fr;
@@ -764,7 +777,7 @@ p {
 
 /* Privacy Policy Page Styles */
 .privacy-main {
-    padding: 140px 0 80px;
+    padding: 160px 0 80px;
     min-height: 100vh;
     background: #ffffff;
 }
