@@ -694,6 +694,12 @@ p {
     .container {
         padding: 0 1rem;
     }
+    
+    .hero-logo-img {
+        width: 210px;
+        height: 210px;
+        border-radius: 52px;
+    }
 }
 
 @media (max-width: 480px) {
