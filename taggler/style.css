@@ -590,38 +590,14 @@ p {
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
-        position: fixed;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        padding: 2rem;
+        display: flex;
+        align-items: center;
         gap: 1rem;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links.active {
-        transform: translateY(0);
+        flex-wrap: wrap;
     }
 
     .hamburger {
-        display: flex;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+        display: none;
     }
 
     .hero-content {
