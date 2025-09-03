@@ -5,13 +5,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
     
+    console.log('Hamburger element:', hamburger);
+    console.log('NavLinks element:', navLinks);
+    
     if (hamburger && navLinks) {
+        console.log('Adding click event listener to hamburger');
         hamburger.addEventListener('click', function() {
+            console.log('Hamburger clicked!');
             // Toggle active class on hamburger
             hamburger.classList.toggle('active');
             
             // Toggle active class on nav links
             navLinks.classList.toggle('active');
+            
+            console.log('NavLinks active class:', navLinks.classList.contains('active'));
             
             // Prevent body scroll when menu is open
             document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
