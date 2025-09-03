@@ -182,6 +182,55 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Screenshot modal functionality
+    const modal = document.getElementById('screenshotModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalClose = document.querySelector('.modal-close');
+    
+    // Add click handlers to all screenshot images
+    const screenshotImages = document.querySelectorAll('.screenshot img');
+    screenshotImages.forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function() {
+            const caption = this.closest('.screenshot').querySelector('.screenshot-caption');
+            const title = caption ? caption.querySelector('h4').textContent : '';
+            const description = caption ? caption.querySelector('p').textContent : '';
+            
+            modalImage.src = this.src;
+            modalImage.alt = this.alt;
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close modal functionality
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+    
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            closeModal();
+        }
+    });
+    
     // Console welcome message
     console.log('%c🏷️ Welcome to Taggler!', 'color: #18c231; font-size: 20px; font-weight: bold;');
     console.log('%cSmart budget tracking with tags', 'color: #6e6e73; font-size: 14px;');

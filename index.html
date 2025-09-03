@@ -52,16 +52,21 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <svg class="hero-logo" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#b7ff58;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#18c231;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <rect width="200" height="200" rx="50" fill="url(#logoGradient)"/>
-                    <path d="M50 75h100v12H50v-12zm0 25h75v12H50v-12zm0 25h50v12H50v-12z" fill="white"/>
-                </svg>
+                <div class="hero-logo-container">
+                    <img src="screenShoots/app-logo.png" alt="Taggler App Logo" class="hero-logo-img">
+                    <div class="hero-logo-fallback">
+                        <svg class="hero-logo" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#b7ff58;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#18c231;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="200" height="200" rx="50" fill="url(#logoGradient)"/>
+                            <path d="M50 75h100v12H50v-12zm0 25h75v12H50v-12zm0 25h50v12H50v-12z" fill="white"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -111,16 +116,32 @@
             <h2 class="section-title">See Taggler in action</h2>
             <div class="screenshots-grid">
                 <div class="screenshot">
-                    <img src="/assets/screenshots/1.png" alt="Taggler main interface" loading="lazy">
+                    <img src="screenShoots/tags-screen.png" alt="Taggler Tags Management - Create and organize tags for your budget categories" loading="lazy">
+                    <div class="screenshot-caption">
+                        <h4>Tags Management</h4>
+                        <p>Create and organize custom tags for your budget categories</p>
+                    </div>
                 </div>
                 <div class="screenshot">
-                    <img src="/assets/screenshots/2.png" alt="Taggler budget planning" loading="lazy">
+                    <img src="screenShoots/transaction-entry.png" alt="Taggler Transaction Entry - Fast expense and income tracking with numeric keypad" loading="lazy">
+                    <div class="screenshot-caption">
+                        <h4>Quick Entry</h4>
+                        <p>Record transactions in seconds with our streamlined interface</p>
+                    </div>
                 </div>
                 <div class="screenshot">
-                    <img src="/assets/screenshots/3.png" alt="Taggler expense tracking" loading="lazy">
+                    <img src="screenShoots/transaction-list.png" alt="Taggler Transaction List - View and manage all your financial transactions" loading="lazy">
+                    <div class="screenshot-caption">
+                        <h4>Transaction History</h4>
+                        <p>View and manage all your financial transactions by date and category</p>
+                    </div>
                 </div>
                 <div class="screenshot">
-                    <img src="/assets/screenshots/4.png" alt="Taggler reports" loading="lazy">
+                    <img src="screenShoots/financial-report.png" alt="Taggler Financial Reports - Comprehensive analytics and insights" loading="lazy">
+                    <div class="screenshot-caption">
+                        <h4>Smart Reports</h4>
+                        <p>Get clear insights into your spending patterns and financial health</p>
+                    </div>
                 </div>
             </div>
             <div class="screenshots-cta">
@@ -213,6 +234,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Screenshot Modal -->
+    <div id="screenshotModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-caption">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
 
     <script src="taggler/app.js" defer></script>
 </body>
