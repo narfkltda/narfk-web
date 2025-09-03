@@ -7,10 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('Hamburger element:', hamburger);
     console.log('NavLinks element:', navLinks);
+    console.log('Current page URL:', window.location.href);
     
     if (hamburger && navLinks) {
         console.log('Adding click event listener to hamburger');
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             console.log('Hamburger clicked!');
             // Toggle active class on hamburger
             hamburger.classList.toggle('active');
@@ -19,12 +22,19 @@ document.addEventListener('DOMContentLoaded', function() {
             navLinks.classList.toggle('active');
             
             console.log('NavLinks active class:', navLinks.classList.contains('active'));
+            console.log('Hamburger active class:', hamburger.classList.contains('active'));
             
             // Prevent body scroll when menu is open
             document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
         });
-        
-        // Close menu when clicking on nav links
+    } else {
+        console.error('Hamburger or navLinks not found!');
+        console.log('Available elements with hamburger ID:', document.querySelectorAll('#hamburger'));
+        console.log('Available elements with navLinks ID:', document.querySelectorAll('#navLinks'));
+    }
+    
+    // Close menu when clicking on nav links (only if navLinks exists)
+    if (navLinks) {
         const navLinkElements = navLinks.querySelectorAll('.nav-link');
         navLinkElements.forEach(link => {
             link.addEventListener('click', function() {
