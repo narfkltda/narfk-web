@@ -239,9 +239,9 @@ p {
 }
 
 .hero-logo-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50px;
+    width: 300px;
+    height: 300px;
+    border-radius: 75px;
     filter: drop-shadow(0 20px 40px rgba(24, 194, 49, 0.2));
     animation: float 3s ease-in-out infinite;
     object-fit: contain;
