@@ -604,9 +604,11 @@ p {
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         z-index: 999;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        display: none;
     }
 
     .nav-links.active {
+        display: flex;
         transform: translateY(0);
     }
 
