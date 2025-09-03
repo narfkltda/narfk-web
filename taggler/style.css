@@ -123,11 +123,17 @@ p {
     text-decoration: none;
 }
 
-.logo {
+.logo-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
+    display: block;
+    object-fit: contain;
 }
 
-.logo:hover {
+.logo-img:hover {
     transform: scale(1.1);
 }
 
