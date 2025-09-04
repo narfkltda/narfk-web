@@ -6,6 +6,24 @@
     <title>Privacy Policy - Taggler</title>
     <meta name="description" content="Privacy Policy for Taggler - Smart Budget Tracking with Tags. Learn how we protect your data and privacy.">
     
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      // Basic GA4 setup
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      // (Optional) Privacy-friendly defaults; adjust as needed
+      gtag('consent', 'default', {
+        'analytics_storage': 'granted'   // set to 'denied' if you want an explicit banner first
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', {
+        'anonymize_ip': true,         // IP anonymization
+        'send_page_view': true,       // Pageview on load
+        'cookie_domain': 'auto'       // Works with narfk.com
+      });
+    </script>
+    
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="NARFK">

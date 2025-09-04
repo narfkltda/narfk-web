@@ -6,6 +6,24 @@
     <title>Taggler - Smart Budget Tracking with Tags</title>
     <meta name="description" content="Plan budgets, track income & expenses, and export data with a fast, tag-first workflow. Download Taggler on the App Store.">
     
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      // Basic GA4 setup
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      // (Optional) Privacy-friendly defaults; adjust as needed
+      gtag('consent', 'default', {
+        'analytics_storage': 'granted'   // set to 'denied' if you want an explicit banner first
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', {
+        'anonymize_ip': true,         // IP anonymization
+        'send_page_view': true,       // Pageview on load
+        'cookie_domain': 'auto'       // Works with narfk.com
+      });
+    </script>
+    
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="NARFK">
@@ -234,5 +252,39 @@
     </div>
 
     <script src="./app.js" defer></script>
+    
+    <script>
+      // Track outbound clicks to the App Store (and other external links if needed)
+      (function () {
+        function isExternal(url) {
+          try {
+            const u = new URL(url, location.href);
+            return u.origin !== location.origin;
+          } catch (e) { return false; }
+        }
+        document.addEventListener('click', function (e) {
+          const a = e.target.closest('a[href]');
+          if (!a) return;
+
+          // App Store / external tracking
+          const href = a.getAttribute('href');
+          if (href && isExternal(href)) {
+            gtag('event', 'click', {
+              'event_category': 'outbound',
+              'event_label': href,
+              'transport_type': 'beacon'
+            });
+          }
+
+          // Optional: specifically tag App Store buttons by CSS class if you have one
+          if (a.classList && a.classList.contains('btn--primary')) {
+            gtag('event', 'cta_click', {
+              'cta_name': 'app_store_primary',
+              'cta_href': href
+            });
+          }
+        }, { capture: true });
+      })();
+    </script>
 </body>
 </html>
