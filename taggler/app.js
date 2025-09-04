@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Console welcome message
     console.log('%c🏷️ Welcome to Taggler!', 'color: #18c231; font-size: 20px; font-weight: bold;');
     console.log('%cSmart budget tracking with tags', 'color: #6e6e73; font-size: 14px;');
-    console.log('%cDownload: https://apps.apple.com/us/app/taggler-smart-budget-tracker/id6744193862', 'color: #18c231; font-size: 12px;');
+    console.log('%cDownload: https://apps.apple.com/app/apple-store/id6744193862?pt=119728457&ct=narfkwebsite&mt=8', 'color: #18c231; font-size: 12px;');
 });
 
 // Utility function for smooth animations
