@@ -524,6 +524,14 @@ p {
 .copyright {
     color: #a1a1a6;
     font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.legal-info {
+    color: #8e8e93;
+    font-size: 0.75rem;
+    margin: 0;
+    opacity: 0.8;
 }
 
 /* Responsive Design */
