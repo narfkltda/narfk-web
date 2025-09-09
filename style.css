@@ -327,17 +327,19 @@ p {
 .app-logo {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
+    transform: scale(1.3);
     display: block;
 }
 
 /* Floating Animation */
 @keyframes float {
     0%, 100% {
-        transform: translateY(0px);
+        transform: translateY(0px) scale(1.3);
     }
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-15px) scale(1.3);
     }
 }
 
@@ -348,7 +350,7 @@ p {
 
 .app-logo-container:hover {
     animation-play-state: paused;
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.3);
 }
 
 .app-content {
