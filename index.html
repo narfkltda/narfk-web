@@ -3,23 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Narfk - Software Development</title>
-    <meta name="description" content="Narfk - Software Development Company">
+    <title>Narfk - Technology with Purpose</title>
+    <meta name="description" content="Narfk builds innovative software experiences that make a difference. Discover Taggler, our personal finance app, and iBibleVerse, our interactive Bible quiz app.">
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SSP71JWT8J"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-SSP71JWT8J');
-    </script>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Narfk - Technology with Purpose">
+    <meta property="og:description" content="We build experiences that make a difference. Discover our innovative apps: Taggler and iBibleVerse.">
+    <meta property="og:url" content="https://narfk.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://narfk.com/assets/og-homepage.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Narfk - Technology with Purpose">
+    <meta name="twitter:description" content="We build experiences that make a difference. Discover our innovative apps: Taggler and iBibleVerse.">
+    <meta name="twitter:image" content="https://narfk.com/assets/og-homepage.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Narfk - Software Development</h1>
-    <p>Welcome to Narfk's website.</p>
-    <p><a href="taggler/">Visit Taggler App</a></p>
-    <p><a href="ibibleverse/">Visit iBibleVerse App</a></p>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="/" class="brand-link">Narfk</a>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#apps" class="nav-link">Apps</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <a href="#apps" class="btn-primary nav-cta">View Apps</a>
+                
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Technology with Purpose</h1>
+                <p class="hero-subtitle">We build experiences that make a difference</p>
+                <a href="#apps" class="btn-primary btn-large">Explore Our Apps</a>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- App Showcase Section -->
+    <section id="apps" class="apps">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Apps</h2>
+                <p class="section-subtitle">Innovative solutions designed with care</p>
+            </div>
+            
+            <div class="apps-grid">
+                <!-- Taggler App -->
+                <div class="app-card">
+                    <div class="app-visual">
+                        <div class="app-mockup">
+                            <img src="taggler/assets/tags-screen.png" alt="Taggler app interface" class="app-screenshot">
+                        </div>
+                    </div>
+                    <div class="app-content">
+                        <h3 class="app-name">Taggler</h3>
+                        <p class="app-description">A personal finance app based on tags, visually inspired by Apple Wallet. Organize your expenses with intuitive categorization and beautiful design.</p>
+                        <div class="app-features">
+                            <span class="feature-tag">Personal Finance</span>
+                            <span class="feature-tag">Apple Wallet Style</span>
+                            <span class="feature-tag">Tag-Based</span>
+                        </div>
+                        <a href="taggler/" class="btn-secondary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- iBibleVerse App -->
+                <div class="app-card">
+                    <div class="app-visual">
+                        <div class="app-mockup">
+                            <img src="ibibleverse/assets/quiz-screen.png" alt="iBibleVerse app interface" class="app-screenshot">
+                        </div>
+                    </div>
+                    <div class="app-content">
+                        <h3 class="app-name">iBibleVerse</h3>
+                        <p class="app-description">An interactive Bible quiz app with over 30,000 verses. Test your knowledge, study verses, and grow in faith with engaging quizzes.</p>
+                        <div class="app-features">
+                            <span class="feature-tag">Bible Study</span>
+                            <span class="feature-tag">Interactive Quizzes</span>
+                            <span class="feature-tag">30,000+ Verses</span>
+                        </div>
+                        <a href="ibibleverse/" class="btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About Narfk</h2>
+                <p class="about-text">
+                    Narfk is an innovative software company focused on creating high-quality, 
+                    privacy-respecting applications that enhance people's daily lives. We believe 
+                    in technology with purpose—building experiences that not only look beautiful 
+                    but also make a meaningful difference.
+                </p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Apps</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">30K+</div>
+                        <div class="stat-label">Bible Verses</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Privacy Focused</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights">
+        <div class="container">
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">🎨</div>
+                    <h3 class="highlight-title">Beautiful Design</h3>
+                    <p class="highlight-description">Every pixel is crafted with attention to detail, inspired by the best in modern design.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🔒</div>
+                    <h3 class="highlight-title">Privacy First</h3>
+                    <p class="highlight-description">Your data stays yours. We build apps that respect your privacy and security.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">⚡</div>
+                    <h3 class="highlight-title">Performance</h3>
+                    <p class="highlight-description">Lightning-fast, smooth experiences that work seamlessly across all devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="contact-text">Have questions about our apps or want to collaborate? We'd love to hear from you.</p>
+                <a href="mailto:hello@narfk.com" class="btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">Narfk</div>
+                    <p class="footer-tagline">Technology with Purpose</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-nav">
+                            <li><a href="#home" class="footer-link">Home</a></li>
+                            <li><a href="#apps" class="footer-link">Apps</a></li>
+                            <li><a href="#about" class="footer-link">About</a></li>
+                            <li><a href="#contact" class="footer-link">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4 class="footer-title">Our Apps</h4>
+                        <ul class="footer-nav">
+                            <li><a href="taggler/" class="footer-link">Taggler</a></li>
+                            <li><a href="ibibleverse/" class="footer-link">iBibleVerse</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4 class="footer-title">Legal</h4>
+                        <ul class="footer-nav">
+                            <li><a href="taggler/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                            <li><a href="taggler/terms.html" class="footer-link">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Narfk. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
