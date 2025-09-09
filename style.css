@@ -325,10 +325,8 @@ p {
 }
 
 .app-logo {
-    width: 100%;
-    height: auto;
-    max-width: 80px;
-    max-height: 80px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
     display: block;
 }
@@ -339,8 +337,18 @@ p {
         transform: translateY(0px);
     }
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-15px);
     }
+}
+
+/* Ensure animation is visible */
+.app-logo-container {
+    will-change: transform;
+}
+
+.app-logo-container:hover {
+    animation-play-state: paused;
+    transform: translateY(-5px);
 }
 
 .app-content {
