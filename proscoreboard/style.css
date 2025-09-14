@@ -248,91 +248,14 @@ p {
     padding: 20px;
 }
 
-/* ProScoreboard Logo Styles */
-.proscoreboard-logo {
+.hero-logo-img {
     width: 300px;
     height: 300px;
     border-radius: 75px;
-    background: linear-gradient(135deg, #2D2D2D, #404040);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+    filter: drop-shadow(0 20px 40px rgba(255, 215, 0, 0.3));
     animation: float 3s ease-in-out infinite;
-    border: 3px solid rgba(255, 215, 0, 0.2);
-}
-
-.scoreboard-display {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    justify-content: center;
-}
-
-.scoreboard-display .digit {
-    width: 80px;
-    height: 120px;
-    background: #1a1a1a;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 4rem;
-    font-weight: 700;
-    color: #FFD700;
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-    border: 2px solid #333;
-    position: relative;
-    overflow: hidden;
-}
-
-.scoreboard-display .digit::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, transparent 30%, rgba(255, 215, 0, 0.1) 50%, transparent 70%);
-    animation: shimmer 2s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-    0%, 100% { transform: translateX(-100%); }
-    50% { transform: translateX(100%); }
-}
-
-/* Navigation Logo Styles */
-.nav-logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #2D2D2D, #404040);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid rgba(255, 215, 0, 0.2);
-}
-
-.nav-display {
-    gap: 2px;
-}
-
-.nav-display .digit {
-    width: 12px;
-    height: 18px;
-    background: #1a1a1a;
-    border-radius: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: #FFD700;
-    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
-    border: 1px solid #333;
+    object-fit: cover;
+    object-position: center;
 }
 
 .hero-logo-fallback {
