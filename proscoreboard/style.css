@@ -134,6 +134,8 @@ p {
     display: inline-block;
     text-decoration: none;
     transition: transform 0.3s ease;
+    padding: 2px;
+    border-radius: 12px;
 }
 
 .logo-link:hover {
@@ -147,7 +149,8 @@ p {
     transition: transform 0.3s ease;
     flex-shrink: 0;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
 }
 
 .logo-img:hover {
@@ -242,6 +245,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .hero-logo-img {
@@ -250,7 +254,8 @@ p {
     border-radius: 75px;
     filter: drop-shadow(0 20px 40px rgba(255, 215, 0, 0.3));
     animation: float 3s ease-in-out infinite;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
 }
 
 .hero-logo-fallback {
