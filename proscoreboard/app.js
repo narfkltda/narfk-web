@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const focusableElements = document.querySelectorAll('a, button, input, textarea, select, details, summary');
     focusableElements.forEach(element => {
         element.addEventListener('focus', function() {
-            this.style.outline = '2px solid #FF6B35';
+            this.style.outline = '2px solid #FFD700';
             this.style.outlineOffset = '2px';
         });
         
@@ -236,9 +236,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Console welcome message
-    console.log('%c🏆 Welcome to ProScoreboard!', 'color: #FF6B35; font-size: 20px; font-weight: bold;');
+    console.log('%c🏆 Welcome to ProScoreboard!', 'color: #FFD700; font-size: 20px; font-weight: bold;');
     console.log('%cProfessional scoreboard app for sports and games', 'color: #6e6e73; font-size: 14px;');
-    console.log('%cDownload: https://apps.apple.com/app/apple-store/id[PLACEHOLDER]?pt=119728457&ct=narfkwebsite&mt=8', 'color: #FF6B35; font-size: 12px;');
+    console.log('%cDownload: https://apps.apple.com/app/apple-store/id[PLACEHOLDER]?pt=119728457&ct=narfkwebsite&mt=8', 'color: #FFD700; font-size: 12px;');
 });
 
 // Utility function for smooth animations
@@ -268,8 +268,8 @@ function addScrollToTop() {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #FFB84D 0%, #FF6B35 100%);
-        color: white;
+        background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+        color: #2D2D2D;
         border: none;
         font-size: 20px;
         cursor: pointer;
@@ -277,7 +277,8 @@ function addScrollToTop() {
         visibility: hidden;
         transition: all 0.3s ease;
         z-index: 1000;
-        box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+        box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+        font-weight: bold;
     `;
     
     document.body.appendChild(scrollToTopBtn);
